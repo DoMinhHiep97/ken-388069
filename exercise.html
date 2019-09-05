@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend>Convert metter and feet</legend>
+        Metter<input type="number" oninput="metter(value)" id="valuee" value="0"><!--(value) ở đây truy cập đến giá trị hiện thị ở ô input-->
+        Convert to Feet: <span id="result1"></span> <br> <br>
+        Feet  <input type="number" oninput="feets(value)" id="feet" value="0">
+        Convert to Metter: <span id="result2"></span>
+    </fieldset>
+</form>
+<script>
+  function metter(met) {
+      met=parseFloat(met);
+document.getElementById("result1").innerHTML=3.279*met;
+  }
+  function feets(fet) {
+      fet=parseFloat(fet);
+      document.getElementById("result2").innerHTML=0.305*fet;
+  }
+</script>
+</body>
+</html>
